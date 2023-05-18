@@ -18,6 +18,8 @@
       },
       "extensions": [
         "ms-python.python",
+        "ms-python.pylint",
+        "ms-python.flake8",
         "visualstudioexptteam.vscodeintellicode",
         "esbenp.prettier-vscode"
       ]
