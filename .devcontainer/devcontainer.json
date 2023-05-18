@@ -1,0 +1,27 @@
+{
+  "name": "Existing Docker Compose (Extend)",
+  "dockerComposeFile": ["../local.yml", "./docker-compose.override.yml"],
+  "service": "django",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "[python]": {
+          "editor.rulers": [120]
+        },
+        "editor.formatOnSave": true,
+        "python.pythonPath": "/usr/local/bin/python",
+        "python.linting.pylintEnabled": true,
+        "python.formatting.provider": "black",
+        "python.linting.flake8Enabled": true,
+        "python.linting.mypyEnabled": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "visualstudioexptteam.vscodeintellicode",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "postCreateCommand": "apt update && apt upgrade -y && apt install -y git && git config --global --add safe.directory /app"
+}
