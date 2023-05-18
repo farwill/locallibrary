@@ -11,9 +11,6 @@ class AuthorAdmin(admin.ModelAdmin):
     fields = ["first_name", "last_name", ("date_of_birth", "date_of_death")]
 
 
-# Register the admin class with the associated model
-
-
 class BooksInstanceInline(admin.TabularInline):
     model = BookInstance
 
