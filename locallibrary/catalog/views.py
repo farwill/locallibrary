@@ -7,6 +7,11 @@ from .models import Author, Book, BookInstance
 # Create your views here.
 def index(request):
     """View function for home page of site."""
+    num_authors = Author.objects.count()  # The 'all()' is implied by default.
+
+    # Number of visits to this view, as counted in the session variable.
+    num_visits = request.session.get("num_visits", 0)
+    request.session["num_visits"] = num_visits + 1
 
     # Generate counts of some of the main objects
     num_books = Book.objects.all().count()
@@ -23,6 +28,7 @@ def index(request):
         "num_instances": num_instances,
         "num_instances_available": num_instances_available,
         "num_authors": num_authors,
+        "num_visits": num_visits,
     }
 
     # Render the HTML template index.html with the data in the context variable
