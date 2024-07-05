@@ -1,0 +1,127 @@
+[
+  {
+    "model": "catalog.genre",
+    "pk": 1,
+    "fields": {
+      "name": "Science Fiction"
+    }
+  },
+  {
+    "model": "catalog.genre",
+    "pk": 2,
+    "fields": {
+      "name": "Fantasy"
+    }
+  },
+  {
+    "model": "catalog.genre",
+    "pk": 3,
+    "fields": {
+      "name": "Western"
+    }
+  },
+  {
+    "model": "catalog.genre",
+    "pk": 4,
+    "fields": {
+      "name": "French Poetry"
+    }
+  },
+  {
+    "model": "catalog.book",
+    "pk": 1,
+    "fields": {
+      "title": "The Wise Man's Fear (The Kingkiller Chronicle, #2)",
+      "author": 1,
+      "summary": "The Wise Man's Fear is a fantasy novel written by American author Patrick Rothfuss and the second volume in The Kingkiller Chronicle. It was published on March 1, 2011, by DAW Books.[3] It is the sequel to 2007's The Name of the Wind.",
+      "isbn": "9780756404734",
+      "genre": [2]
+    }
+  },
+  {
+    "model": "catalog.book",
+    "pk": 2,
+    "fields": {
+      "title": "The Dueling Machine",
+      "author": 2,
+      "summary": "Dueling as a means of settling disputes has been revived by the invention of the dueling machine, which allows two adversaries to have at each other in the imaginary world of their choosing, with no danger to either other than humiliation and the loss of the point in dispute—until the Kerak Worlds found a way to kill with the machine. Unless a young Star Watchman can solve the mystery, the warlike Kerak Worlds will gobble up the planets of the Acquataine Cluster, murdering its leaders one at a time, and then be ready for the Terrans themselves...",
+      "isbn": "9780425064665",
+      "genre": [1]
+    }
+  },
+  {
+    "model": "catalog.book",
+    "pk": 3,
+    "fields": {
+      "title": "The Name of the Wind (The Kingkiller Chronicle, #1)",
+      "author": 1,
+      "summary": "Told in Kvothe's own voice, this is the tale of the magically gifted young man who grows to be the most notorious wizard his world has ever seen.",
+      "isbn": "9781473211896",
+      "genre": [2]
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": "1e68927d-cb13-436c-9b5c-53c23998c873",
+    "fields": {
+      "book": 1,
+      "imprint": "imprint",
+      "due_back": "2016-10-12",
+      "borrower": null,
+      "status": "m"
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": "3102d140-d20a-4670-93c7-2fcbc3db933d",
+    "fields": {
+      "book": 3,
+      "imprint": "Published March 27th 2007 by Penguin Grou",
+      "due_back": "2016-10-02",
+      "borrower": null,
+      "status": "m"
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": "5a0fe86a-2e4a-403a-b47f-5c178e77fd8b",
+    "fields": {
+      "book": 3,
+      "imprint": "Published March 27th 2007 by Penguin Grou",
+      "due_back": "2016-10-12",
+      "borrower": null,
+      "status": "m"
+    }
+  },
+  {
+    "model": "catalog.bookinstance",
+    "pk": "a7f1b866-fa93-4705-b97f-45326b2aebd6",
+    "fields": {
+      "book": 3,
+      "imprint": "Published March 27th 2007 by Penguin Grou",
+      "due_back": "2016-10-12",
+      "borrower": 1,
+      "status": "o"
+    }
+  },
+  {
+    "model": "catalog.author",
+    "pk": 1,
+    "fields": {
+      "first_name": "Patrick",
+      "last_name": "Rothfuss",
+      "date_of_birth": "1973-06-06",
+      "date_of_death": null
+    }
+  },
+  {
+    "model": "catalog.author",
+    "pk": 2,
+    "fields": {
+      "first_name": "Ben",
+      "last_name": "Bova",
+      "date_of_birth": "1932-11-08",
+      "date_of_death": "2020-11-29"
+    }
+  }
+]
